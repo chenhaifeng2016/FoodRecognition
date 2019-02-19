@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRecognition.setOnClickListener(this);
 
        requestPermission();
+
+       //视频自动抓拍
+        //https://www.cnblogs.com/renhui/p/8718758.html
     }
 
 
