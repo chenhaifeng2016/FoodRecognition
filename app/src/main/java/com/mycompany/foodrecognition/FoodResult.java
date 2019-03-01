@@ -6,7 +6,9 @@ public class FoodResult {
     private boolean has_calorie;
     private String name;
     private String probability;
-    private Baike baike_info;
+    private FoodResultBaike baike_info;
+
+
 
     public void setCalorie(String calorie) {
         this.calorie = calorie;
@@ -44,11 +46,11 @@ public class FoodResult {
 
 
 
-    public Baike getBaike_info() {
+    public FoodResultBaike getBaike_info() {
         return baike_info;
     }
 
-    public void setBaike_info(Baike baike_info) {
+    public void setBaike_info(FoodResultBaike baike_info) {
         this.baike_info = baike_info;
     }
 }

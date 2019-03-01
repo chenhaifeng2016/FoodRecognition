@@ -1,6 +1,6 @@
 package com.mycompany.foodrecognition;
 
-public class Baike {
+public class FoodResultBaike {
 
     private String baike_url;
 

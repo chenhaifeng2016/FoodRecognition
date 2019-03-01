@@ -258,7 +258,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             previewRequestBuilder.addTarget(surface);
 
 
-            imageReader = ImageReader.newInstance(640, 480, ImageFormat.JPEG, 1);
+            //imageReader = ImageReader.newInstance(640, 480, ImageFormat.JPEG, 1);
+            imageReader = ImageReader.newInstance(640, 480, ImageFormat.JPEG, 2);
             imageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
 
                                                         @Override
@@ -465,7 +466,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
-        RetrofitManager.getInstance().foodRecognize(base64Image, 5, 0.95f, 0).
+        RetrofitManager.getInstance().foodRecognize(base64Image, 1, 0.95f, 0).
                 subscribeOn(Schedulers.io()).
                 observeOn(AndroidSchedulers.mainThread()).
                 subscribe(new Observer<FoodRecognizeResponse>() {
@@ -485,12 +486,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                             float probability = Float.valueOf(result.getProbability());
 
-                            if (probability >= 0.9) {
+                           // if (probability >= 0.9) {
                                 tvFood.setText(result.getName());
-                                break;
-                            } else {
-                                tvFood.setText("");
-                            }
+                             //   break;
+                            //} else {
+                              //  tvFood.setText("");
+                            //}
                         }
 
 

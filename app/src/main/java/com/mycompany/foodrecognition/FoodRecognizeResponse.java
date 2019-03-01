@@ -11,6 +11,8 @@ public class FoodRecognizeResponse {
 
     private ArrayList<FoodResult> result;
 
+
+
     public String getLog_id() {
         return log_id;
     }
